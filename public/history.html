@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Trade history</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d9e5a'/%3E%3Cpath d='M6 22l7-8 5 5 8-10' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <span class="brand">My trade journal</span>
+    <nav><a href="index.html">Dashboard</a><a class="active" href="history.html">History</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="filters">
+    <select id="fm" aria-label="Month"></select>
+    <input id="fq" type="search" placeholder="Search trade name" aria-label="Search trade name">
+    <button class="btn" id="csv" type="button" style="margin-left:auto">Export CSV</button>
+  </div>
+  <section id="sum" class="grid3" style="margin-bottom:12px"></section>
+  <div class="card tblwrap" id="tbl"><div class="loading">Loading history…</div></div>
+</main>
+<div id="toast" role="status"></div>
+<script src="js/app.js"></script>
+<script src="js/history.js"></script>
+</body>
+</html>

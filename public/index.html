@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Trade journal</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d9e5a'/%3E%3Cpath d='M6 22l7-8 5 5 8-10' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <span class="brand">My trade journal</span>
+    <nav><a class="active" href="index.html">Dashboard</a><a href="history.html">History</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <section id="top" class="grid3"></section>
+  <div class="capline">Profit % is calculated on starting capital <b id="cap"></b><button class="link" id="editCap" type="button">Edit</button></div>
+
+  <div class="monthhead">
+    <h2 id="mlabel"></h2>
+    <div style="display:flex;gap:6px">
+      <button class="nb" id="prev" type="button" aria-label="Previous month">‹</button>
+      <button class="nb" id="todayBtn" type="button">Today</button>
+      <button class="nb" id="next" type="button" aria-label="Next month">›</button>
+    </div>
+  </div>
+  <section id="mbar" class="grid5"></section>
+
+  <section class="split">
+    <div class="card">
+      <div id="cal" class="cal"></div>
+      <div class="legend">
+        <span>Loss</span>
+        <i style="background:color-mix(in srgb,var(--red) 75%,transparent)"></i>
+        <i style="background:color-mix(in srgb,var(--red) 30%,transparent)"></i>
+        <i style="background:var(--soft)"></i>
+        <i style="background:color-mix(in srgb,var(--green) 30%,transparent)"></i>
+        <i style="background:color-mix(in srgb,var(--green) 75%,transparent)"></i>
+        <span>Profit</span>
+        <span style="margin-left:auto">Darker = bigger day (net of brokerage)</span>
+      </div>
+    </div>
+    <div class="card" id="panel"></div>
+  </section>
+</main>
+<div id="toast" role="status"></div>
+<script src="js/app.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
